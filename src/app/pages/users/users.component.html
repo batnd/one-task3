@@ -1,0 +1,26 @@
+<div class="users">
+  <div class="content">
+    <table>
+      <thead>
+        <tr>
+          <th>Id:</th>
+          <th>Name:</th>
+          <th>E-mail:</th>
+        </tr>
+      </thead>
+      <ng-container *ngIf="(users$ | async) as users">
+        <tbody>
+        <tr *ngFor="let user of users">
+          <td>{{ user.id }}</td>
+          <td>{{ user.name }}</td>
+          <td>{{ user.email }}</td>
+        </tr>
+        </tbody>
+      </ng-container>
+    </table>
+  </div>
+  <div class="pagination">
+    <button type="button">Prev</button>
+    <button [disabled]="isLoading$ | async" (click)="onLoadMore()" type="button">Next</button>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+<div class="login">
+  <div class="content">
+    <p>Login</p>
+    <form (submit)="onSubmit()" [formGroup]="formLogin">
+      <div class="form-inputs">
+        <div class="input-group">
+          <label for="email">E-mail:</label>
+          <input
+            formControlName="email"
+            id="email"
+            type="text"
+            [class.invalid]="(formControls['email'].invalid && formControls['email'].dirty) || (isLoginFailed$ | async)">
+        </div>
+        <div class="input-group">
+          <label for="password">Password:</label>
+          <input
+            formControlName="password"
+            id="password"
+            type="password"
+            [class.invalid]="(formControls['password'].invalid && formControls['password'].dirty) || (isLoginFailed$ | async)">
+        </div>
+      </div>
+      <div class="form-actions">
+        <button [disabled]="(formLogin.invalid) || (isLoading$ | async)" type="submit">Login into</button>
+      </div>
+      <div class="form-extra">
+        <a routerLink="../signup">Need an account?</a>
+      </div>
+    </form>
+  </div>
+</div>

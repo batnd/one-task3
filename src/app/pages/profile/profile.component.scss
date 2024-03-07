@@ -1,0 +1,50 @@
+.profile {
+  height: 100%;
+  padding: 50px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .content {
+    width: 350px;
+    min-height: 500px;
+    border-radius: 5px;
+    box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.15);
+    box-sizing: border-box;
+    padding: 25px 30px 45px;
+
+    .user-card {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .user-avatar {
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+        background-color: #cbcbcb;
+        margin-bottom: 25px;
+      }
+
+      h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        width: 100%;
+      }
+
+      .user-info {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+      }
+
+      p {
+
+      }
+    }
+  }
+}

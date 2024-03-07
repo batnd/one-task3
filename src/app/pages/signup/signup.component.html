@@ -1,0 +1,39 @@
+<div class="signup">
+  <div class="content">
+    <p>SignUp</p>
+    <form (submit)="onSubmit()" [formGroup]="formSignup">
+      <div class="form-inputs">
+        <div class="input-group">
+          <label for="email">Name:</label>
+          <input
+            formControlName="name"
+            id="name"
+            type="text"
+            [class.invalid]="formControls['name'].invalid && formControls['name'].dirty">
+        </div>
+        <div class="input-group">
+          <label for="email">E-mail:</label>
+          <input
+            formControlName="email"
+            id="email"
+            type="text"
+            [class.invalid]="formControls['email'].invalid && formControls['email'].dirty">
+        </div>
+        <div class="input-group">
+          <label for="password">Password:</label>
+          <input
+            formControlName="password"
+            id="password"
+            type="password"
+            [class.invalid]="formControls['password'].invalid && formControls['password'].dirty">
+        </div>
+      </div>
+      <div class="form-actions">
+        <button [disabled]="(formSignup.invalid) || (isLoading$ | async)" type="submit">Create Account</button>
+      </div>
+      <div class="form-extra">
+        <a routerLink="../login">Already have an account?</a>
+      </div>
+    </form>
+  </div>
+</div>

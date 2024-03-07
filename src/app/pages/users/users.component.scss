@@ -1,0 +1,76 @@
+.users {
+  height: 100%;
+  padding: 50px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  .content {
+    width: 700px;
+    background-color: #ffffff;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.15);
+    margin-bottom: 30px;
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      border: 1px solid #c5c5c5;
+
+      thead {
+        border-bottom: 1px solid #c5c5c5;
+
+        tr {
+
+          th {
+            padding: 10px;
+            border-right: 1px solid #c5c5c5;
+            text-align: start;
+          }
+
+          th:last-child {
+            border-right: none;
+          }
+        }
+      }
+
+      tbody {
+
+        tr {
+
+          td {
+            border-right: 1px solid #c5c5c5;
+            padding: 10px;
+          }
+
+          td:last-child {
+            border-right: none;
+          }
+        }
+
+        tr:not(:first-child) {
+          border-top: 1px solid #c5c5c5;
+        }
+      }
+    }
+  }
+
+  .pagination {
+    width: 700px;
+    display: flex;
+    justify-content: center;
+    column-gap: 20px;
+
+    button {
+      padding: 10px;
+
+      &:not(:disabled) {
+        cursor: pointer;
+      }
+      &:disabled {
+        cursor: not-allowed;
+      }
+    }
+  }
+}

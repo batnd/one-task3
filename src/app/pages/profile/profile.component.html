@@ -1,0 +1,13 @@
+<div class="profile">
+  <div class="content">
+    <div class="user-card" *ngIf="(currentUser$ | async) as currentUser">
+      <div class="user-avatar"></div>
+      <h2>{{ currentUser.name }}</h2>
+      <div class="user-info">
+        <p>email: {{ currentUser.email }}</p>
+        <p>About:</p>
+        <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+      </div>
+    </div>
+  </div>
+</div>
